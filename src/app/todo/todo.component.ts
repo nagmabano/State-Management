@@ -5,10 +5,12 @@ import { Store } from '@ngrx/store';
 import { AppState } from '../../store/store';
 import { todoSelector } from '../../store/selectors';
 import * as TodoActions from '../../store/actions';
+import { NgFor, NgIf, CommonModule } from '@angular/common';
 
 @Component({
+  standalone: true,
   selector: 'app-todo',
-  imports: [],
+  imports: [NgFor, NgIf, CommonModule],
   templateUrl: './todo.component.html',
   styleUrl: './todo.component.css'
 })
